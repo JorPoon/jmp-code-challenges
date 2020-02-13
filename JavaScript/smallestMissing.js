@@ -26,6 +26,10 @@ const smallestMissing = (arr) => {
        return "Array is empty!"
    }
 
+   if(arr[0] !== 0) {
+       return smallest = 0
+   }
+
    while (last - first > 1) {
        let midpoint = parseInt((first + last)/2)
        if(arr[midpoint] === midpoint) {
@@ -38,7 +42,7 @@ const smallestMissing = (arr) => {
            smallest = midpoint
        }
    }
-   
+
    return smallest
 }
 
@@ -46,7 +50,7 @@ const smallestMissing = (arr) => {
 console.log(smallestMissing([0,1,2,3,6,7]))
 console.log(smallestMissing([0,1,2,3,4,6,5,7,8,9,10,11,12,13,15,17,20,21,25]))
 console.log(smallestMissing([0,1,3,6,7]))
-console.log(smallestMissing([0,1,2,3,4,5,6,7,8,9,10,13]))
+console.log(smallestMissing([1,2,3,4,5,6,7,8,9,10,13]))
 console.log(smallestMissing([]))
 
 
